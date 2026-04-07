@@ -104,7 +104,7 @@ jobs:
 
     - name: Validate /ping endpoint
       run: |
-        response=$(curl -sf http://localhost:5000/health)
+        response=$(curl -sf http://localhost:5000/ping)
         echo "Response: $response"
         echo "$response" | grep '"status":"OK"'
 
